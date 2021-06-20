@@ -12,23 +12,20 @@ namespace Homework_Theme_04
             int[,] arr = new int[12, 4];
             int[] loss = new int[12];
             int profit = 0;
-            string str = "";
+            string mounth = "";
             Console.WriteLine($"{"Месяц",5} {"Доход, тыс. руб.",15} {"Расход, тыс. руб.",15} {"Прибыль, тыс. руб.",15}");
+
             for (int i = 0; i < 12; i++)
             {
                 arr[i, 0] = i + 1;//заполняем номер месяца.
-            }
-            for (int i = 0; i < 12; i++)
-            {
-                
-                 Console.Write($"Доходы за {i+1} месяц:");
-                 arr[i, 1] = Convert.ToInt32(Console.ReadLine());//заполняем доходы за месяц
-                 Console.Write($"Расходы за {i+1} месяц:");
-                 arr[i, 2] = Convert.ToInt32(Console.ReadLine());//заполняем расходы за месяц
-                
+                Console.Write($"Доходы за {i + 1} месяц:");
+                arr[i, 1] = Check();//заполняем доходы за месяц
+                Console.Write($"Расходы за {i + 1} месяц:");
+                arr[i, 2] = Check();//заполняем расходы за месяц
+
                 //arr[i, 1] = random.Next(1, 5) * 10;
                 //arr[i, 2] = random.Next(1, 5) * 10;
-                
+
                 arr[i, 3] = arr[i, 1] - arr[i, 2];//подсчет прибыли
                 loss[i] = arr[i, 3];
                 Console.WriteLine($"{arr[i, 0],5} {arr[i, 1],15} {arr[i, 2],15} {arr[i, 3],15}");
@@ -45,24 +42,24 @@ namespace Homework_Theme_04
                     }
                     if (arr[i, 3] == loss[j])
                     {
-                        if (String.IsNullOrWhiteSpace(str))
+                        if (String.IsNullOrWhiteSpace(mounth))
                         {
-                            str = (i + 1).ToString();
+                            mounth = (i + 1).ToString();
                         }
                         else
                         {
-                            str = str + ", " + (i + 1).ToString();
+                            mounth = mounth + ", " + (i + 1).ToString();
                         }
                     }
                 }
             }
-                Console.WriteLine($"Худшая прибыль в месяцах: {str}");
+            Console.WriteLine($"Худшая прибыль в месяцах: {mounth}");
 
-                Console.WriteLine($"Месяцев с положительной прибылью: {profit}");
+            Console.WriteLine($"Месяцев с положительной прибылью: {profit}");
             Console.Read();
 
             Console.Write("Введите количество строк : ");
-           */
+            */
             /*
             //Задание 2.
             int n = int.Parse(Console.ReadLine());
@@ -95,8 +92,9 @@ namespace Homework_Theme_04
 
             Console.ReadKey();
             */
+
+            //задание 3.1
             /*
-            //задание 3
             int a = 0;
             int[,] arr = new int[3, 3];
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -112,7 +110,7 @@ namespace Homework_Theme_04
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
                     Console.Write(arr[i, j] + " ");
-                 }
+                }
                 Console.WriteLine();
             }
             Console.Write("ВВедите число:");
@@ -126,10 +124,137 @@ namespace Homework_Theme_04
                 }
                 Console.WriteLine();
             }
+            
+            //задание 3.2 (Сложение)
+
+            int[,] arr = new int[3, 3];
+            int[,] arr1 = new int[3, 3];
+
+            int a = 0;
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    a++;
+                    arr[i, j] = a;
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            a=0;
+            Console.WriteLine("\n" + "-" + "\n");
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    a++;
+                    arr[i, j] = a;
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("\n" + "=" + "\n"); 
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    arr1[i, j] += arr[i, j];
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            
+            //Задание 3.2 (вычитание)
+            int[,] arr = new int[3, 3];
+            int[,] arr1 = new int[3, 3];
+
+            int a = 0;
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    a++;
+                    arr[i, j] = a;
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            a = 0;
+            Console.WriteLine("\n" + "-" + "\n");
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    a++;
+                    arr[i, j] = a;
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("\n" + "=" + "\n"); 
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    arr1[i, j] -= arr[i, j];
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            */
+            //Задание 3.3
+            int[,] arr = new int[3, 3];
+            int[,] arr1 = new int[3, 3];
+
+            int a = 0;
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    a++;
+                    arr[i, j] = a;
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            a = 0;
+            Console.WriteLine("\n" + "*" + "\n");
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    a++;
+                    arr[i, j] = a;
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("\n" + "=" + "\n"); 
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    arr1[i, j] *= arr[i, j];
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            /*
+            int Check()
+            {
+                int x;
+                while (true)
+                {
+                    while (!int.TryParse(Console.ReadLine(), out x)) Console.WriteLine("нужно вести число!");
+                    {
+                        break;
+                    }
+                }
+                return x;
+            }
             */
         }
-    }
 
+    }
 }
-    
 
