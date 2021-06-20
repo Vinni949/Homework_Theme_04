@@ -124,9 +124,9 @@ namespace Homework_Theme_04
                 }
                 Console.WriteLine();
             }
-            
+            */
             //задание 3.2 (Сложение)
-
+            /*
             int[,] arr = new int[3, 3];
             int[,] arr1 = new int[3, 3];
 
@@ -137,19 +137,17 @@ namespace Homework_Theme_04
                 {
                     a++;
                     arr[i, j] = a;
+                    arr1[i, j] = a;
                     Console.Write(arr[i, j] + " ");
                 }
                 Console.WriteLine();
             }
-            a=0;
-            Console.WriteLine("\n" + "-" + "\n");
-            for (int i = 0; i < arr.GetLength(0); i++)
+            Console.WriteLine("\n" + "+" + "\n");
+            for (int i = 0; i < arr1.GetLength(0); i++)
             {
-                for (int j = 0; j < arr.GetLength(1); j++)
+                for (int j = 0; j < arr1.GetLength(1); j++)
                 {
-                    a++;
-                    arr[i, j] = a;
-                    Console.Write(arr[i, j] + " ");
+                    Console.Write(arr1[i, j] + " ");
                 }
                 Console.WriteLine();
             }
@@ -159,12 +157,13 @@ namespace Homework_Theme_04
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
                     arr1[i, j] += arr[i, j];
-                    Console.Write(arr[i, j] + " ");
+                    Console.Write(arr1[i, j] + " ");
                 }
                 Console.WriteLine();
             }
-            
+            */
             //Задание 3.2 (вычитание)
+            /*
             int[,] arr = new int[3, 3];
             int[,] arr1 = new int[3, 3];
 
@@ -175,34 +174,33 @@ namespace Homework_Theme_04
                 {
                     a++;
                     arr[i, j] = a;
+                    arr1[i, j] = a;
                     Console.Write(arr[i, j] + " ");
                 }
                 Console.WriteLine();
             }
-            a = 0;
             Console.WriteLine("\n" + "-" + "\n");
-            for (int i = 0; i < arr.GetLength(0); i++)
+            for (int i = 0; i < arr1.GetLength(0); i++)
             {
-                for (int j = 0; j < arr.GetLength(1); j++)
+                for (int j = 0; j < arr1.GetLength(1); j++)
                 {
-                    a++;
-                    arr[i, j] = a;
-                    Console.Write(arr[i, j] + " ");
+                    Console.Write(arr1[i, j] + " ");
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("\n" + "=" + "\n"); 
+            Console.WriteLine("\n" + "=" + "\n");
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
                     arr1[i, j] -= arr[i, j];
-                    Console.Write(arr[i, j] + " ");
+                    Console.Write(arr1[i, j] + " ");
                 }
                 Console.WriteLine();
             }
             */
             //Задание 3.3
+            
             int[,] arr = new int[3, 3];
             int[,] arr1 = new int[3, 3];
 
@@ -213,19 +211,17 @@ namespace Homework_Theme_04
                 {
                     a++;
                     arr[i, j] = a;
+                    arr1[i, j] = a;
                     Console.Write(arr[i, j] + " ");
                 }
                 Console.WriteLine();
             }
-            a = 0;
             Console.WriteLine("\n" + "*" + "\n");
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
-                    a++;
-                    arr[i, j] = a;
-                    Console.Write(arr[i, j] + " ");
+                    Console.Write(arr1[i, j] + " ");
                 }
                 Console.WriteLine();
             }
@@ -235,10 +231,11 @@ namespace Homework_Theme_04
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
                     arr1[i, j] *= arr[i, j];
-                    Console.Write(arr[i, j] + " ");
+                    Console.Write(arr1[i, j] + " ");
                 }
                 Console.WriteLine();
             }
+            
             /*
             int Check()
             {
