@@ -225,13 +225,17 @@ namespace Homework_Theme_04
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("\n" + "=" + "\n"); 
+            Console.WriteLine("\n" + "=" + "\n");
+            int[,] arr2 = new int[3, 3];
             for (int i = 0; i < arr.GetLength(0); i++)
             {
-                for (int j = 0; j < arr.GetLength(1); j++)
+                for (int j = 0; j < arr1.GetLength(1); j++)
                 {
-                    arr1[i, j] *= arr[i, j];
-                    Console.Write(arr1[i, j] + " ");
+                    for(int k=0;k<arr1.GetLength(0);k++)
+                    {
+                        arr2[i,j] += arr[i, k] * arr1[k, j];
+                    }
+                    Console.Write(arr2[i, j] + " ");
                 }
                 Console.WriteLine();
             }
